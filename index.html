@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--    <link rel="stylesheet" href="style.css">-->
+    <title>Document</title>
+</head>
+<body class="bg-gray-500">
+<h1 class="text-3xl text-white font-bold w-screen  text-center mt-3">Bomb game</h1>
+<div class="flex justify-center mt-4  border-3 p-4 flex-wrap gap-3" id="area"></div>
+
+
+<div class="game-result hidden fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-75 p-6 rounded-lg">
+    <div class="text-center">
+        <h1 id="result" class="text-4xl font-bold text-red-500 mb-4"></h1>
+        <p id="message" class="text-xl text-white"></p>
+        <button  class="p-2 mt-3 border-2 rounded-md bg-blue-400 px-5 hover:cursor-pointer restart-btn" type="button">Restart</button>
+    </div>
+</div>
+
+
+<div id="setupArea" class="fixed inset-0 flex flex-col justify-center items-center p-8  bg-gray-800 text-white rounded-lg space-y-6 w-80 h-80 mx-auto hidden">
+    <div class="w-full">
+        <label for="rows" class="block mb-2 text-sm font-medium">Choose Rows:</label>
+        <select id="rows" class="w-full bg-gray-700 text-white p-2 rounded">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </div>
+    <div class="w-full">
+        <label for="cols" class="block mb-2 text-sm font-medium">Choose Columns:</label>
+        <select id="cols" class="w-full bg-gray-700 text-white p-2 rounded">
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+    </div>
+    <button id="startButton" class="w-full bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 rounded">
+        Start
+    </button>
+</div>
+
+
+<div id="topRightButtonContainer" class="absolute top-4 right-4">
+    <button id="boardSizeButton" type="button" class="bg-blue-600 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-lg shadow-lg">
+        Board Size
+    </button>
+</div>
+
+</body>
+<script src="script.js"></script>
+</html>
