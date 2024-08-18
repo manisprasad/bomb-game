@@ -52,8 +52,10 @@ const handleGameLogic = (board, array) => {
             cell.textContent = array[index];
 
             if (array[index] === "x") {
+                cell.style.backgroundColor = "red";
                 handleGameEnd(cell, gameResultDiv, resultElement, messageElement, false);
             } else {
+                cell.style.backgroundColor = "green";
                 clickedCells++;
                 if (clickedCells === totalSafeCells) {
                     handleGameEnd(cell, gameResultDiv, resultElement, messageElement, true);
